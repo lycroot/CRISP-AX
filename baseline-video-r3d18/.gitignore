@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.log
+video_dataset_profile.json
+cache/
+video_results/
+*.pt
