@@ -9,11 +9,11 @@ from axhome_csi.profile import summarize_samples
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="检查 AXHome-MM-v1 发布清单分布")
+    parser = argparse.ArgumentParser(description="Summarize the CRISP-AX release manifest")
     parser.add_argument("--dataset-root", required=True)
-    parser.add_argument("--output", default=None, help="可选 JSON 输出路径")
+    parser.add_argument("--output", default=None, help="Optional JSON output path")
     parser.add_argument(
-        "--validate-paths", action="store_true", help="同时检查每个 CSI 文件是否存在"
+        "--validate-paths", action="store_true", help="Also check that every CSI file exists"
     )
     return parser.parse_args()
 

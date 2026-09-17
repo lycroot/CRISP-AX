@@ -16,13 +16,13 @@ from axhome_video.splits import make_in_domain_split
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="训练一个 AXHome-MM-v1 Video-only R3D-18 in-domain 种子"
+        description="Train one CRISP-AX Video-only in-domain seed"
     )
     add_training_arguments(parser)
     parser.add_argument(
         "--reference-assignment-root",
         default=None,
-        help="可选：CSI in-domain 结果根目录，用于逐样本核对划分",
+        help="Optional: root of the CSI in-domain results, used to verify the split per sample",
     )
     return parser.parse_args()
 

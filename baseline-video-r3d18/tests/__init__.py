@@ -1,1 +1,1 @@
-"""Tests for the AXHome-MM video baseline."""
+"""Tests for the CRISP-AX video baseline."""

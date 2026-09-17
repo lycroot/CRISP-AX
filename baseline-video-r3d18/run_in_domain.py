@@ -20,7 +20,7 @@ DEFAULT_SEEDS = (2026, 2027, 2028, 2029, 2030)
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="顺序运行 AXHome-MM-v1 Video-only R3D-18 in-domain 五种子"
+        description="Run the CRISP-AX Video-only in-domain protocol for several seeds"
     )
     add_training_arguments(parser)
     parser.add_argument(
@@ -28,12 +28,12 @@ def parse_args() -> argparse.Namespace:
         nargs="+",
         type=int,
         default=list(DEFAULT_SEEDS),
-        help="要运行的随机种子（默认：2026 2027 2028 2029 2030）",
+        help="Random seeds to run (default: 2026 2027 2028 2029 2030)",
     )
     parser.add_argument(
         "--reference-assignment-root",
         required=True,
-        help="CSI in-domain 结果根目录；逐样本核对是正式批量运行的硬性要求",
+        help="Root of the CSI in-domain results; per-sample split verification is mandatory for batch runs",
     )
     return parser.parse_args()
 

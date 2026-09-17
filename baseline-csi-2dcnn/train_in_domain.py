@@ -13,7 +13,7 @@ from axhome_csi.splits import make_in_domain_split
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "训练一个按被试与动作分层的 AXHome-MM-v1 in-domain CSI 2D CNN 实验"
+            "Train one CRISP-AX in-domain CSI-only run (subject x action stratified split)"
         )
     )
     add_training_arguments(parser)

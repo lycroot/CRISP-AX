@@ -27,8 +27,8 @@ def add_training_arguments(parser: argparse.ArgumentParser) -> None:
         default=DEFAULT_ARCHITECTURE,
         choices=list(VIDEO_ARCHITECTURES),
         help=(
-            "Video-only 基线架构；全部架构共用同一冻结 clip 输入、"
-            "同一 Kinetics-400 预训练族与同一训练预算"
+            "Video-only baseline architecture; all architectures share the same frozen "
+            "clip input, Kinetics-400 pretraining family and training budget"
         ),
     )
     parser.add_argument("--frames", type=int, default=16)

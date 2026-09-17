@@ -18,7 +18,7 @@ from axhome_csi.splits import HUMAN_ACTIONS, make_in_domain_split
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "顺序运行 AXHome-MM-v1 被试×动作分层的多种子 in-domain CSI 实验"
+            "Run the CRISP-AX in-domain CSI experiment (subject x action stratified) for several seeds"
         )
     )
     add_training_arguments(parser)
@@ -27,7 +27,7 @@ def parse_args() -> argparse.Namespace:
         type=int,
         nargs="+",
         default=[2026, 2027, 2028, 2029, 2030],
-        help="依次运行的随机种子，默认 2026 2027 2028 2029 2030",
+        help="Random seeds to run in order (default: 2026 2027 2028 2029 2030)",
     )
     return parser.parse_args()
 

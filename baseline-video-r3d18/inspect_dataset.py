@@ -14,14 +14,14 @@ from axhome_video.splits import human_samples
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="检查 AXHome-MM-v1 视频清单和 Video-only 基线样本分布"
+        description="Summarize the CRISP-AX video manifest and Video-only baseline samples"
     )
     parser.add_argument("--dataset-root", required=True)
-    parser.add_argument("--output", default=None, help="可选 JSON 输出路径")
+    parser.add_argument("--output", default=None, help="Optional JSON output path")
     parser.add_argument(
         "--validate-paths",
         action="store_true",
-        help="若任一清单视频文件缺失则返回非零退出码",
+        help="Exit with a non-zero code if any manifest video file is missing",
     )
     return parser.parse_args()
 

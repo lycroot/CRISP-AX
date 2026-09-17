@@ -98,7 +98,7 @@ def write_mini_release(
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
-    (root / "DATASET_VERSION.txt").write_text("AXHome-MM-v1\n", encoding="utf-8")
+    (root / "DATASET_VERSION.txt").write_text("CRISP-AX\n", encoding="utf-8")
     (root / "fixture.json").write_text(
         json.dumps({"samples": len(rows)}), encoding="utf-8"
     )

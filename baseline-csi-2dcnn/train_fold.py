@@ -11,14 +11,14 @@ from axhome_csi.splits import rotating_loso_pairs
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="训练一个 AXHome-MM-v1 subject-wise LOSO CSI 2D CNN 折"
+        description="Train one CRISP-AX subject-wise LOSO fold (CSI-only)"
     )
     add_training_arguments(parser)
-    parser.add_argument("--test-person", required=True, help="测试被试，例如 P01")
+    parser.add_argument("--test-person", required=True, help="Test subject, e.g. P01")
     parser.add_argument(
         "--val-person",
         default=None,
-        help="验证被试；省略时使用测试被试后的下一名被试",
+        help="Validation subject; defaults to the subject after the test subject",
     )
     return parser.parse_args()
 

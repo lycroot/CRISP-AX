@@ -1,4 +1,4 @@
-"""AXHome-MM-v1 CSI-only baseline package."""
+"""CRISP-AX CSI-only baseline package."""
 
 from .splits import HUMAN_ACTIONS
 

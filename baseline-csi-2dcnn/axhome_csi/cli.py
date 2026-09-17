@@ -11,9 +11,9 @@ if TYPE_CHECKING:
 
 
 def add_training_arguments(parser: argparse.ArgumentParser) -> None:
-    parser.add_argument("--dataset-root", required=True, help="解压后的 AXHome-MM-v1 目录")
-    parser.add_argument("--output-dir", required=True, help="结果输出目录")
-    parser.add_argument("--cache-dir", default=None, help="可选的预处理缓存根目录")
+    parser.add_argument("--dataset-root", required=True, help="Root of the extracted CRISP-AX release")
+    parser.add_argument("--output-dir", required=True, help="Directory for run outputs")
+    parser.add_argument("--cache-dir", default=None, help="Optional root directory of the preprocessing cache")
     parser.add_argument("--epochs", type=int, default=50)
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--learning-rate", type=float, default=1e-3)
@@ -23,15 +23,16 @@ def add_training_arguments(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--num-workers", type=int, default=4)
     parser.add_argument("--seed", type=int, default=2026)
     parser.add_argument(
-        "--device", default="auto", help="auto、cpu、cuda 或 cuda:0 等 PyTorch device"
+        "--device", default="auto", help="PyTorch device: auto, cpu, cuda, cuda:0, ..."
     )
     parser.add_argument(
         "--arch",
         default=DEFAULT_ARCHITECTURE,
         choices=list(CSI_ARCHITECTURES),
         help=(
-            "CSI-only 基线架构；全部架构共用同一冻结输入与同一训练预算，"
-            "结果用于说明数据可分性而非模型优劣"
+            "CSI-only baseline architecture; all architectures share the same frozen "
+            "input and training budget, and are reported as evidence of data "
+            "separability rather than a model ranking"
         ),
     )
     parser.add_argument("--target-packets", type=int, default=256)

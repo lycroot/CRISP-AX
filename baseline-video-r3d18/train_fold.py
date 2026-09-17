@@ -12,7 +12,7 @@ from axhome_video.splits import make_subject_fold, rotating_loso_pairs
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="训练一个 AXHome-MM-v1 Video-only R3D-18 LOSO 折"
+        description="Train one CRISP-AX Video-only LOSO fold"
     )
     add_training_arguments(parser)
     parser.add_argument("--test-person", required=True)

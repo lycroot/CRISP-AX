@@ -18,7 +18,7 @@ from tests._fixtures import write_mini_release
 class DataAndSplitTests(unittest.TestCase):
     def test_manifest_resolves_release_relative_paths(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp) / "AXHome-MM-v1"
+            root = Path(tmp) / "CRISP-AX"
             rows = write_mini_release(root)
 
             loaded = load_manifest(root)
@@ -29,7 +29,7 @@ class DataAndSplitTests(unittest.TestCase):
 
     def test_subject_fold_has_no_person_overlap(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
-            root = Path(tmp) / "AXHome-MM-v1"
+            root = Path(tmp) / "CRISP-AX"
             write_mini_release(root)
             samples = load_manifest(root)
 

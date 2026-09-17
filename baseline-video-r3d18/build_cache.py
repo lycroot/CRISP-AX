@@ -12,7 +12,7 @@ from axhome_video.splits import human_samples
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="构建 AXHome-MM-v1 R3D-18 均匀 16 帧视频缓存"
+        description="Build the CRISP-AX uniform 16-frame video cache"
     )
     parser.add_argument("--dataset-root", required=True)
     parser.add_argument("--cache-dir", required=True)

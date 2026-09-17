@@ -20,14 +20,14 @@ from axhome_video.splits import (
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="顺序运行 AXHome-MM-v1 Video-only R3D-18 十折 LOSO"
+        description="Run the CRISP-AX Video-only 10-fold LOSO protocol"
     )
     add_training_arguments(parser)
     parser.add_argument(
         "--test-people",
         nargs="+",
         default=None,
-        help="可选：只运行指定测试被试；默认按协议运行全部被试",
+        help="Optional: run only these test subjects (default: all subjects)",
     )
     return parser.parse_args()
 

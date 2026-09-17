@@ -1,3 +1,3 @@
-"""AXHome-MM-v1 Video-only R3D-18 baseline."""
+"""CRISP-AX Video-only baseline package."""
 
 __version__ = "0.1.0"

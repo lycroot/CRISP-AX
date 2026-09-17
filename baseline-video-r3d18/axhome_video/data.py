@@ -54,7 +54,7 @@ def load_video_manifest(
     require_ok: bool = True,
     validate_paths: bool = False,
 ) -> list[VideoSampleRecord]:
-    """Load video records from the canonical AXHome-MM-v1 archive index."""
+    """Load video records from the canonical CRISP-AX archive index."""
     root = Path(dataset_root).resolve()
     manifest_path = root / "manifests" / "archive_index.csv"
     if not manifest_path.is_file():

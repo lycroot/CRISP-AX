@@ -14,14 +14,14 @@ from axhome_csi.splits import rotating_loso_pairs
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="运行 AXHome-MM-v1 10 折 subject-wise LOSO CSI 2D CNN 基线"
+        description="Run the CRISP-AX 10-fold subject-wise LOSO CSI-only baseline"
     )
     add_training_arguments(parser)
     parser.add_argument(
         "--test-people",
         nargs="*",
         default=None,
-        help="只运行指定测试被试；默认 P01-P10 全部运行",
+        help="Run only these test subjects (default: all of P01-P10)",
     )
     return parser.parse_args()
 

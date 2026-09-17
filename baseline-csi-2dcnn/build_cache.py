@@ -13,7 +13,7 @@ from axhome_csi.splits import human_samples
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="为 AXHome-MM-v1 CSI 2D CNN 基线建立预处理缓存"
+        description="Build the preprocessing cache for the CRISP-AX CSI-only baselines"
     )
     parser.add_argument("--dataset-root", required=True)
     parser.add_argument("--cache-dir", required=True)
@@ -21,7 +21,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--target-subcarriers", type=int, default=128)
     parser.add_argument("--low-energy-ratio", type=float, default=0.05)
     parser.add_argument("--workers", type=int, default=4)
-    parser.add_argument("--limit", type=int, default=None, help="仅处理前 N 个样本，用于检查")
+    parser.add_argument("--limit", type=int, default=None, help="Process only the first N samples (for checking)")
     parser.add_argument("--overwrite", action="store_true")
     return parser.parse_args()
 
